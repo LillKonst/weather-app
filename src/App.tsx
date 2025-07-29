@@ -1,4 +1,4 @@
-import './App.css'
+import './index.css'
 import axios from "axios"
 import { useEffect } from 'react';
 import WeatherCard from "./components/WeatherCard/WeatherCard";
@@ -26,6 +26,9 @@ function App() {
 
   return (
     <div>
+      <div className="w-full h-4 bg-sky-400">
+        <h1 className="text-blue-500">Sky Antagelser</h1>
+      </div>
       <WeatherCard />
     </div>
   );
