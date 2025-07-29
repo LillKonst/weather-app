@@ -1,35 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import axios from "axios"
+import { useEffect } from 'react';
+import WeatherCard from "./components/WeatherCard/WeatherCard";
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  useEffect(() => {
+    const fetchWeather = async () => {
+      try {
+        const baseUrl = import.meta.env.WEATHER_APP_BASEURL;
+        const apiKey = import.meta.env.WEATHER_APP_API_KEY;
+        const city = "Oslo,norge";
+        const url= `$(baseUrl)?q=${city}&units=metric&appid=${apiKey}`;
+
+        const response = await axios.get(url);
+        console.log(response.data);
+      } catch (error) {
+        console.error("Feil ved henting av værdata", error);
+      }
+    };
+
+    fetchWeather();
+  }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <WeatherCard />
+    </div>
+  );
 }
 
 export default App
