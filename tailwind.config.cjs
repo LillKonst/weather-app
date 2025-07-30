@@ -5,7 +5,13 @@ export default {
     "./index.html", // viktig for Vite eller HTML-filer
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        morningsky: "#FFCD70",
+        daysky: "#70D6FF",
+        nightsky: "#0D7097",
+      },
+    },
   },
   plugins: [],
 };
