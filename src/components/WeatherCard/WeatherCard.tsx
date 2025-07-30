@@ -9,8 +9,20 @@ export default function WeatherCard() {
   return (
     <div className="m-5">
       <h1>Været i {weatherData?.name}</h1>
-      <p>Temperatur: {weatherData?.main.temp}°C</p>
-      <p>Beskrivelse: {weatherData?.weather[0].description}</p>
-    </div>
+      
+      
+   
+      <div className="w-20 h-20 rounded-full bg-blue-500">
+        <p>Beskrivelse: {weatherData?.weather[0].description}</p>
+        <div className="flex">
+          <p>Temperatur: {weatherData?.main.temp}°C</p>
+          <div className="flex flex-col">
+            <p>wind</p>
+            <p>humidity</p>
+
+          </div>
+        </div>
+      </div>
+     </div>
   );
 }

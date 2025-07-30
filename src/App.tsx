@@ -2,6 +2,7 @@ import './index.css'
 import axios from "axios"
 import { useEffect } from 'react';
 import WeatherCard from "./components/WeatherCard/WeatherCard";
+import Test from './components/Test';
 
 
 
@@ -30,6 +31,8 @@ function App() {
         <h1 className="text-blue-500">Sky Antagelser</h1>
       </div>
       <WeatherCard />
+      <Test />
+      <p className="bg-red-500 text-white p-4">TEST</p>
     </div>
   );
 }
