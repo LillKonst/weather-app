@@ -1,3 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+
+  --color-background: "#F5F5F5";
+  --color-daysky: #70D6FF;
+  --color-morningsky: "#FFCD70";
+  --color-nightsky: "#0D7097";
+}
