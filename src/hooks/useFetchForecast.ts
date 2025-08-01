@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-interface ForecastItem {
+export interface ForecastItem {
   dt_txt: string; 
   main: {
     temp: number;
@@ -13,7 +13,7 @@ interface ForecastItem {
   }[];
 }
 
-interface ForecastData {
+export interface ForecastData {
   city: {
     name: string;
     country: string;
