@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        lightbackground: "#F1FCFF",
         morningsky: "#FFCD70",
         daysky: "#70D6FF",
         nightsky: "#0D7097",

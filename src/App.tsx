@@ -25,9 +25,9 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <div className="w-full h-4 bg-sky-400">
-        <h1 className="text-blue-500">Sky Antagelser</h1>
+    <div className="m-0 p-3 w-full h-full">
+      <div className="w-full rounded-lg p-2 border-2 border-sky-400">
+        <p>Searchbar</p>
       </div>
       <WeatherCard />
     </div>

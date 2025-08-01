@@ -2,8 +2,16 @@
 
 @theme {
 
-  --color-background: "#F5F5F5";
+  --color-lightbackground: #F1FCFF;
   --color-daysky: #70D6FF;
   --color-morningsky: "#FFCD70";
   --color-nightsky: "#0D7097";
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #F1FCFF;
 }
